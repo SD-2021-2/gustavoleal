@@ -11,6 +11,7 @@ class TCPServer {
 		ServerSocket myServer = new ServerSocket(6789); 
 		while(true) { 
 
+
 			Socket conectSocket = myServer.accept(); 
 
 			Scanner inputClient = new Scanner(conectSocket.getInputStream());
@@ -26,7 +27,7 @@ class TCPServer {
 				outputClient.writeBytes("Aprovado\n"); 
 			}else
 			{
-				outputClient.writeBytes("reprovado\n"); 
+				outputClient.writeBytes("Reprovado\n"); 
 			}
 
 		} 
